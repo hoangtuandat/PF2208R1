@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm thi ĐH</h1>
+    
+    <div class="mon">
+        <p>Môn toán</p>
+        <input type="text" id="toan">
+    </div>
+    <div class="mon">
+        <p>Môn văn</p>
+        <input type="text" id="van">
+    </div>
+    <div class="mon">
+        <p>Môn Anh</p>
+        <input type="text" id="anh">
+    </div>
+    <div class="mon">
+        <p>Khu vực</p>
+        <select name="" id="kv">
+            <option value="kv1">KV1</option>
+            <option value="kv2">KV2</option>
+            <option value="kv3">KV3</option>
+        </select>
+    </div>
+
+    <button onclick="">Tính điểm</button>
+
+    <script>
+        function coculateScore{
+            let diemToan = +document.getElementById("toan").value;
+            let diemvan = +document.getElementById("van").value;
+            let diemanh = +document.getElementById("anh").value;
+            alert(diemToan + diemanh +diemvan)
+        }
+        
+
+    </script>
+</body>
+</html>

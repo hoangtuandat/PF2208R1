@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("nhập vào số a");
+        let b = prompt("nhập vào số b");
+        let c = prompt("nhập vào số c");
+        if (a+b>c && b+c>a && a+c>b && a>0 && b>0 && c>0){
+            alert("a, b, c là 3 cạnh của một tam giác");
+            if (a*a == b*b + c*c || b*b == a*a + c*c || c*c==b*b+a*a){
+                alert("tam giac vuông");
+            }
+        }
+        else{
+            alert("không phải 3 cạnh của 1 tam giac");
+        }
+    </script>
+</body>
+</html>
