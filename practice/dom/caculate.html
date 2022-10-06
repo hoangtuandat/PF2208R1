@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container input{
+            width: 200px ;
+            margin: 5px;
+        }
+        .container button{
+            width: 60px ;
+            margin: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="result"> <br>
+        <button onclick="input(1)">1</button>
+        <button onclick="input(2)">2</button>
+        <button onclick="input(3)">3</button> <br>
+        <button onclick="input(4)">4</button> 
+        <button onclick="input(5)">5</button>
+        <button onclick="input(6)">6</button> <br>
+        <button onclick="input(7)">7</button>
+        <button onclick="input(8)">8</button> 
+        <button onclick="input(9)">9</button> <br>
+        <button onclick="input('+')">+</button>
+        <button onclick="input('-')">-</button>
+        <button onclick="input('*')">x</button> <br>
+        <button onclick="input('/')">/</button>
+        <button onclick="tinh()">=</button>
+        <button onclick="xoa()">Xóa</button>
+    </div>
+
+    <script>
+        let x = "";
+        function a (i){
+            return document.getElementById(i);
+        }
+        function input(num){
+            x+=num;
+            a('result').value = x;
+        }
+
+        function xoa() {
+            x= "";
+            a('result').value = x;
+        }
+
+        function tinh() {
+            a('result').value = eval(a('result').value);
+            x='';
+        }
+        
+    </script>
+</body>
+</html>
