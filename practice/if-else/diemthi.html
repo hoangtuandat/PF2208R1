@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Môn Toán <input type="text" id="toan"></p>
+    <p>Môn Văn <input type="text" id="van"></p>
+    <p>Môn Anh <input type="text" id="anh"></p>
+    <p>Khu vực 
+        <select id="kv">
+            <option value="KV1">KV1</option>
+            <option value="KV2">KV2</option>
+            <option value="KV3">KV3</option>
+        </select>
+    </p>
+    <h3 id="print"></h3>
+    <button onclick="cal()">Tính điểm</button>
+    <script>
+        function cal() {
+            let diemToan = +document.getElementById("toan").value;
+            let diemVan = +document.getElementById("van").value;
+            let diemAnh = +document.getElementById("anh").value;
+            let Kv = document.getElementById("kv").value;
+            let result =  diemToan + diemVan + diemAnh;
+                switch (Kv) {
+                    case "KV1": 
+                        result += 0.5;
+                        break;
+                    case "KV2": 
+                        result += 1;
+                        break;
+                    case "KV3": 
+                        result += 2;
+                        break;
+                }
+            
+                
+            document.getElementById("print").innerHTML = "Điểm của bạn là: " + result;
+        }
+    </script>
+</body>
+</html>

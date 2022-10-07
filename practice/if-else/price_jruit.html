@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="namefruit" placeholder="nhập tên hoa quả">
+    <button  onclick="gia()">Tra giá</button>
+    <h3 id="kq"></h3>
+    <script>
+        function gia() {
+            let tenFruit = document.getElementById("namefruit").value;
+            let result = "";
+
+            if (tenFruit == "ổi") {
+                result = "20,000 VND";
+            }else if (tenFruit == "dưa hấu") {
+                result = "25,000 VND";
+            } else {
+                result == "chưa nhập giá"
+            }
+            document.getElementById("kq").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
