@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // nhập cho đến khi nhập -1
+        let so;
+        let soLan = 0;
+        let soCanDoan = Math.floor(Math.random()*30);
+        while (soLan<3) {
+            so = +prompt("nhập số")
+            if(so > soCanDoan) {
+                document.write ("lớn hơn số cần đoán")
+                soLan++
+            } else if ( so < soCanDoan) {
+                document.write ("nhỏ hơn số cần đoán")
+                soLan++
+            }
+
+            if (soLan = 3) {
+                document.write ("<br>"+"thua")
+            }
+        }
+
+    </script>
+</body>
+</html>

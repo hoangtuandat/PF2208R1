@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="numberone">
+    <input type="text" id="numbertwo">
+    <button onclick="tong()">Tổng</button>
+    <h1 id="res"></h1>
+    <script>
+        function tong() {
+            let in1 = +document.getElementById('numberone').value;
+            let in2 = +document.getElementById('numbertwo').value;
+            document.getElementById("res").innerHTML = in1 + in2;
+        }
+    </script>
+</body>
+</html>
