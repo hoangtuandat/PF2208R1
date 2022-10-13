@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="danh()">
+        Đánh
+    </button>
+    <div id="show"></div>
+    <br>
+    <script>
+        let arr = [
+            ['_', '_', '_'],
+            ['_', '_', '_'],
+            ['_', '_', '_'],
+        ]
+        let turn = 0
+        let str = '';
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                str += arr[i][j] + ' ';
+            }
+            str += '<br>'
+        }
+        document.getElementById('show').innerHTML = str
+
+        function danh() {
+            let i = +prompt("Nhập vào hàng:");
+            let j = +prompt("Nhập vào cột:");
+            if (turn % 2) {
+                arr[i][j] = 'X'
+            } else {
+                arr[i][j] = 'O'
+            }
+            turn++;
+
+
+
+            let str = '';
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    str += arr[i][j] + ' ';
+                }
+                str += '<br>'
+            }
+            document.getElementById('show').innerHTML = str
+        }
+    </script>
+</body>
+
+</html>

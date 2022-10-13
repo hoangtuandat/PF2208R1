@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- nhập số phần tử của mảng -->
+    <!-- <script>
+        let arr = [];
+        let n = prompt("nhập số phần tử của mảng");
+        for( let i=0; i<n;i++) {
+            arr[i] = prompt("nhập phần tử thứ" + (i+1))
+        }
+        alert(arr)
+    </script> -->
+
+    <!-- nhập cho đến khi nhập số 0 và in ra số lượng số chẵn -->
+    <!-- <script>
+      let arr = [];
+      let count = 0;
+      for(let i=0; ;i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + (i));
+        if(arr[i] == 0) {
+            break;
+        }
+        if(arr[i] % 2 == 0) {
+            count++;
+        }
+      }
+      alert(count);
+    </script> -->
+
+    <!-- Tìm max thứ 2 -->
+    <!-- <script>
+      let arr = [2, 5, 7, 6, 9, 13, 15];
+      let max1 = arr[0];
+      let max2 = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max1 < arr[i]) {
+          max1 = arr[i];
+        }
+      }
+      for (let j = 0; j < arr.length; j++) {
+          if (max2 < arr[j] && arr[j] < max1) {
+            max2 = arr[j];
+          }
+        }
+      alert(max1);
+      alert(max2);
+    </script> -->
+
+
+    <!-- max2 một vòng for -->
+    <script>
+      let arr = [2, 1, 1, 8, 7, 4, 2, 4, 8, 6];
+      let max = arr[0];
+      let max2 = 0;
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max2 = max;
+          max = arr[i];
+        } else if (arr[i] > max2 && arr[i] < max) {
+            max2 = arr[i];
+        }
+      }
+      alert(max);
+      alert(max2);
+    </script>
+
+
+    <!-- nhập biến x, tìm vị trí của nó trong mảng -->
+    <!-- <script>
+        let arr = [2, 1, 1, 6, 7, 4, 2, 4, 8, 6];
+        let x = +prompt("Nhập giá trị của x");
+        for(let i=0; i<arr.length; i++) {
+            if(x == arr[i]) {
+                alert("vị trí của x là" + i)
+            }
+        }
+    </script> -->
+  </body>
+</html>

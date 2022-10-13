@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+        let so = +prompt("nhập số");
+        let outPut = "";
+        if(so < 10) {
+            outPut = num[so];
+        } else {
+            let hangChuc = parseInt(so/10)
+            let hangDv = so % 10;
+            if(hangChuc == 1) {
+                outPut = "mười" + " ";
+                if(hangDv == 5) {
+                    outPut += "lăm";
+                } else if(hangDv == 0) {
+                    outPut += "";
+                } else {
+                    outPut += num[hangDv]
+                }
+            }  else {
+                outPut = num[hangChuc] + " " + "mươi" + " ";
+                if(hangDv == 1) {
+                    outPut += "mốt"
+                } else if(hangDv == 5) {
+                    outPut += "lăm"
+                } else {
+                    outPut += num[hangDv]
+                }
+            }
+        }
+
+        alert(outPut)
+    </script>
+</body>
+</html>
