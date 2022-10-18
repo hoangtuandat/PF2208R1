@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Add product</p>
+    <input type="text" id="textProduct">
+    <button type="sumbmit" onclick="displayAll()">add</button>
+    <p>Display all products</p>
+    <table id="displayArea" border="1px"></table>
+
+    <script>
+        let listProduct = ["Ip12", "Samsung", "Note 10", "Nokia"];
+        displayAll();
+        function displayAll() {
+            let str = "<tr>" +
+                "<td>Product name</td>" +
+                "<td></td>" +
+                "<td>" + listProduct.length + "products</td>"
+                "</tr>";
+            for (let i =0; i < listProduct.length; i++) {
+                str += "<tr>" +
+                    "<td>" + listProduct[i] + "</td>" +
+                    "<td><button>Edit</button></td>" + 
+                    "<td><button>Edit</button></td>" +
+                    "</tr>"
+            }
+            document.getElementById("displayArea").innerHTML = str;
+        }
+        function addProduct() {
+            let productName = document.getElementById("textProduct").value;
+            listProduct.push(productName);
+            alert(listProduct)
+            displayAll();
+        }
+    </script>
+</body>
+</html>
