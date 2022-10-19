@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Game đoán số</h2>
+    <button onclick="start()">Chơi</button>
+    <script>
+      function start() {
+        let x = +prompt("nhập khoảng muốn đoán số");
+        let y = Math.floor(Math.random() * (x+1));
+        let z = +prompt("nhập số bạn đoán");
+        let count = 0;
+        if(z==y) {
+            alert("đoán đúng")
+        } else {
+            let a = +prompt("nhập lại");
+            count++
+            if(a == y) {
+                alert("đoán đúng");
+            } else {
+                let a = +prompt("nhập lại");
+                count++
+            }
+        }
+        if(count==2) {
+            alert("thua")
+        }
+      }
+    </script>
+  </body>
+</html>
