@@ -8,17 +8,16 @@
 </head>
 <body>
     <script>
-        let x = +prompt("nhập số")
-        let n1 = 0, n2 = 1, fibo;
-        let sum= 0;
-        for(let i = 0; i < x; i++) {
-            sum +=n1;
-            fibo = n1 + n2;
-            n1 = n2;
-            n2 = fibo;
-            
+        let num = +prompt("Nhập số");
+        let chuoi = num.toString(10);
+        let arr = chuoi.split("");
+        let max = ""
+        for(let i = 0; i <= arr.length; i++) {
+            if(arr[i] <= arr[(i+1)]) {
+                max = arr[(i+1)];
+            } 
         }
-        alert(sum)
+        document.write(max)
     </script>
 </body>
 </html>

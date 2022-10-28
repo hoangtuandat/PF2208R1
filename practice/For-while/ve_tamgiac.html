@@ -7,18 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+   <p id="print"></p>
     <script>
-        let x = +prompt("nhập số")
-        let n1 = 0, n2 = 1, fibo;
-        let sum= 0;
-        for(let i = 0; i < x; i++) {
-            sum +=n1;
-            fibo = n1 + n2;
-            n1 = n2;
-            n2 = fibo;
-            
+        for(let i = 4; i>=0; i--) {
+            for(let j=0;j<=i ; j++) {
+                document.write("*")
+            }
+            document.write("<br>")
         }
-        alert(sum)
     </script>
 </body>
 </html>

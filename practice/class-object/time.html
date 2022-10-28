@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class time {
+        constructor(day, month, year) {
+          this.day = day;
+          this.month = month;
+          this.year = year;
+        }
+        getDay() {
+          return this.day;
+        }
+        getMonth() {
+          return this.month;
+        }
+        getYear() {
+          return this.year;
+        }
+        setDay(day) {
+          this.day = day;
+        }
+        setMonth(month) {
+          this.month = month;
+        }
+        setYear(year) {
+          this.year = year;
+        }
+      }
+      
+      let time1 = new time(24, 10, 1993);
+      time1.setDay(10);
+      time1.setMonth(10);
+      time1.setYear(2019);
+      let day = time1.getDay();
+      let month = time1.getMonth();
+      let year = time1.getYear();
+      
+      alert("Ngày sinh của tôi là: " + day + "/" + month + "/" + year);
+    </script>
+  </body>
+</html>
