@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>JS Bin</title>
-    <style>
-      body {
-        padding-top: 50px;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
-
   <body>
-    <input type="text" id="txtValue" />
-    <input
-      type="button"
-      id="btnAdd"
-      value="Add"
-      onclick="add_element_to_array();"
-    />
-    <input
-      type="button"
-      id="btnDisplay"
-      value="Display"
-      onclick="display_array();"
-    />
-    <div id="result"></div>
-  </body>
-  <script>
-    let x = 0;
-    let array = Array();
-    function add_element_to_array() {
-      array[x] = document.getElementById("txtValue").value;
-      alert("Element: " + array[x] + " Added at index " + x);
-      x++;
-      document.getElementById("txtValue ").value = "";
-    }
-    function display_array() {
-      let e = "<hr/>";
-      for (let i = 0; i < array.length; i++) {
-        e += "Element " + i + " = " + array[i] + "<br/>";
+    <button>Restart</button>
+    <button onclick="play()">Play</button>
+    <p id="show"></p>
+    <br />
+
+    <script>
+      let arr = [
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+      ];
+      let str = "";
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          str += arr[i][j] + " ";
+        }
+        str += "<br>";
       }
-      document.getElementById("result").innerHTML = e;
-    }
-  </script>
+      document.getElementById("show").innerHTML = str;
+      
+      
+      function play() {
+        let i = +prompt("nhập số hàng");
+        let j = +prompt("nhập số cột");
+        arr[i][i] = "x";
+       
+        
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[i].length; j++) {
+            str += arr[i][j] + " ";
+          }
+          str += "<br>";
+        }
+        document.getElementById("show").innerHTML = str;
+      }
+    </script>
+  </body>
 </html>

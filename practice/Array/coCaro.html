@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <button onclick="danh()">Đánh</button>
+    <div id="show"></div>
+    <br />
+    <script>
+      let arr = [
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+        ["-", "-", "-", "-", "-"],
+      ];
+      let tr = "";
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          tr += arr[i][j] + " ";
+        }
+        tr += "<br>";
+        document.getElementById("show").innerHTML = tr;
+      }
+    </script>
+  </body>
+</html>
