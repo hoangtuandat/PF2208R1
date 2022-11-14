@@ -105,6 +105,8 @@ class Game {
     }
   }
 
+ 
+
   leftOverlapped(tetromino) {
     if (tetromino.col < 0) {
       return true
